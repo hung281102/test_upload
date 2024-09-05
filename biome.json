@@ -1,0 +1,88 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+  "files": {
+    "ignoreUnknown": true
+  },
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "attributePosition": "auto",
+    "ignore": [
+      ".vscode",
+      ".idea",
+      "dist",
+      "pnpm-lock.yaml",
+      "scripts",
+      "chaincode",
+      "data",
+      ".venv",
+      ".next"
+    ]
+  },
+  "organizeImports": {
+    "enabled": true,
+    "ignore": [
+      ".vscode",
+      ".idea",
+      "dist",
+      "pnpm-lock.yaml",
+      "scripts",
+      "chaincode",
+      "data",
+      ".venv",
+      ".next"
+    ]
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "a11y": {
+        "noSvgWithoutTitle": "off"
+      }
+    },
+    "ignore": [
+      "dist",
+      "scripts",
+      "chaincode",
+      "data",
+      ".venv",
+      "**/*.js",
+      "**/*.mjs",
+      "**/*.cjs",
+      "*.spec.ts",
+      "*.test.ts",
+      ".next"
+    ]
+  },
+  "javascript": {
+    "formatter": {
+      "quoteProperties": "asNeeded",
+      "trailingCommas": "all",
+      "semicolons": "always",
+      "arrowParentheses": "always",
+      "bracketSpacing": true,
+      "bracketSameLine": false,
+      "quoteStyle": "single",
+      "attributePosition": "auto"
+    },
+    "parser": {
+      "unsafeParameterDecoratorsEnabled": true
+    },
+    "globals": []
+  },
+  "overrides": [
+    {
+      "include": ["gql/**/*.ts"],
+      "linter": {
+        "rules": {
+          "suspicious": {
+            "noExplicitAny": "off"
+          }
+        }
+      }
+    }
+  ]
+}
